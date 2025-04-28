@@ -24,7 +24,7 @@ def grdescent(func,w0,stepsize,maxiter,grad_method="Fixed_step",tolerance=1e-02)
                 break
 
             w_new = w - stepsize * grad
-            updated_loss_value, _ = func(w_new)
+            updated_loss_value, _,_ = func(w_new)
             #将损失函数变大，则需要调整步长防止错过最优点
             if updated_loss_value < previous_loss_value:
                 stepsize *= 1.01

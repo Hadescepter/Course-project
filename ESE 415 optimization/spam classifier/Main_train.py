@@ -14,9 +14,9 @@ Y = data['Y']
 # xTr and xVal will be of the shape d x n (num_dimensions x num_datapoints)
 xTr,xtest,yTr,ytest = valsplit(X,Y)
 
-#loss_function["hinge, logistic, ridge"] and grad_method selcetion["Fixed_step,newton, Bcaktracking"] 
+#loss_function["hinge, logistic, ridge"] and grad_method selcetion["Fixed_step,newton, Backtracking"] 
 loss_function="logistic"
-grad_method="newton"
+grad_method="Backtracking"
 
 # train spam filter with settings and parameters in trainspamfilter.py
 w_trained = trainspamfilter(xTr,yTr,loss_function,grad_method)
